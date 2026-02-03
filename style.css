@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, monospace;
+    scrollbar-width: none;
+    color: gray;
+    transition: 0.2s ease-in-out;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.dancing-script {
+    font-family: "Dancing Script", cursive;
+    color: black;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+
+
+nav {
+    background: #F9F5F2;
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navLogo {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navLogo>span {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 12px 6px;
+    background: linear-gradient(to bottom right, #F9D876 20%, #F99584 80%);
+}
+
+.navLogo>span>i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+#searchArea {
+    width: 400px;
+    position: relative;
+    border: none;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: medium;
+    border-radius: 50px;
+    border: none;
+}
+
+#searchInput:focus {
+    border: none;
+}
+
+#searchBtn {
+    color: white;
+    border-radius: 50px;
+    width: 125px;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    font-size: large;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(to bottom right, #F9D876 20%, #F99584 80%);
+}
+
+#mainArea {
+    background: #F9F5F2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* multiple food items results styling */
+#foodItemArea {
+    width: 35%;
+    padding: 4px 20px;
+    background: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.foodItem {
+    width: 100%;
+    padding: 10px 5px;
+    display: flex;
+    border-bottom: 1px solid rgba(185, 185, 185, 0.4);
+    gap: 16px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.foodItem:hover {
+    box-shadow: 0 0 6px gray;
+    transform: scale(105%);
+    border-radius: 8px;
+    transition: 200ms ease-in-out;
+}
+
+.foodItem img {
+    min-width: 60px;
+    max-width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.foodItem h3 {
+    color: #F99584;
+}
+
+/* getting loading animation for the food item area */
+.loader_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.loader {
+    border: 12px solid whitesmoke;
+    border-top: 16px solid #F9D876;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* single recipe details styling */
+#recipeDetails {
+    width: 65%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.recipeBanner {
+    width: 100%;
+    height: 600px;
+}
+
+.recipeInfo {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    /* padding: 50px 0 30px 0; */
+    position: relative;
+}
+
+.recipeInfo span {
+    display: flex;
+    height: 100px;
+    min-width: 100%;
+    background: #F9F5F2;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding-bottom: 8px;
+}
+
+.recipeInfo p {
+    color: black;
+    font-size: large;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.recipeInfo i {
+    color: #F99584;
+    font-size: larger;
+}
+
+.label {
+    padding: 60px 0;
+    position: absolute;
+    bottom: 25px;
+    overflow: hidden;
+}
+
+.label h1 {
+    background: linear-gradient(to bottom right, #F9D876 20%, #F99584 80%);
+    color: whitesmoke;
+    padding: 10px 50px;
+    transform: rotate(-5deg) scale(105%);
+}
+
+.recipeIngredients {
+    width: 100%;
+    padding: 50px;
+    background: #F3EFEE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.recipeIngredients>h1 {
+    color: #F99584;
+}
+
+.recipeIngredients>ol {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.recipeLink {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.recipeLink h1 {
+    color: #F99584;
+}
+
+.recipeLink p {
+    text-align: center;
+}

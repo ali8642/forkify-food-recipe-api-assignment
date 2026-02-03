@@ -106,7 +106,7 @@ function singleRecipeApi(elem) {
                 <div class="recipeLink">
                     <h1>HOW TO COOK IT</h1>
                     <p>This recipe was carefully designed and tested by <strong>${recipe.publisher}</strong>. Please check out
-                        directions at their <a href=${recipe.source_url} target="_blank">website</a></p>
+                        directions at their <a href=${recipe.source_url} target="_blank"> -> website</a></p>
                 </div>`;
 
       recipeDetails.innerHTML = singleRecipe;
